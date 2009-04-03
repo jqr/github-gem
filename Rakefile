@@ -4,13 +4,14 @@ require 'rake'
 begin
   require 'echoe'
 
-  Echoe.new('github', '0.3.0') do |p|
+  Echoe.new('github', '0.3.4') do |p|
     p.rubyforge_name = 'github'
     p.summary      = "The official `github` command line helper for simplifying your GitHub experience."
     p.description  = "The official `github` command line helper for simplifying your GitHub experience."
     p.url          = "http://github.com/"
     p.author       = ['Chris Wanstrath', 'Kevin Ballard', 'Scott Chacon']
     p.email        = "chris@ozmm.org"
+    p.retain_gemspec  = true
     # p.dependencies = ["launchy"]
   end
 
