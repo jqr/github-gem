@@ -203,3 +203,14 @@ command 'create-from-local' do
   git "remote add origin git@github.com:#{github_user}/#{repo}.git"
   git_exec "push origin master"
 end
+
+
+desc "Request GitHub rebuild the latest Rubygems"
+usage 'github rebuild-gems [user]/[repo]'
+command 'rebuild-gems' do |user, repo|
+  if repo.nil?
+    user, repo = user.split('/')
+  end
+  
+  # sh "curl http://github.com/#{user}/#{repo}/rebuild_gems"
+end

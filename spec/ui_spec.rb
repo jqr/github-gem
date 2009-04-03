@@ -392,6 +392,15 @@ EOF
     end
   end
 
+  # -- rebuild-gems --
+  specify "rebuild-gems user repo should request a gem rebuild" do
+    running :'rebuild-gems', "user", "repo" do
+      setup_url_for
+      @command.should_receive(:sh).with('curl http://github.com/user/repo/rebuild_gems"')
+    end
+  end
+
+
   # -- fallthrough --
   specify "should fall through to actual git commands" do
     running :commit do
