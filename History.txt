@@ -1,3 +1,8 @@
+== 0.3.4.1
+
+* Added --private option to create commands. [drnic] [jqr]
+* Added rebuild-gems command. [jqr]
+
 == 0.1.4
 
 * Added usage notes to commands. [topfunky]
